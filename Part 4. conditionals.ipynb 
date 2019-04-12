@@ -1,0 +1,198 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 习题28 布尔表达式练习"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n",
+      "False\n",
+      "True\n",
+      "True\n",
+      "True\n",
+      "False\n",
+      "True\n",
+      "False\n",
+      "True\n",
+      "False\n",
+      "False\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(True and True)\n",
+    "print(False and True)\n",
+    "print(1 == 1 and 2 == 1)\n",
+    "print(\"test\"==\"test\")\n",
+    "print(1==1 or 2!=1)\n",
+    "print(True and 1 ==1)\n",
+    "print(False and 0 != 0)\n",
+    "print(True or 1 ==1)\n",
+    "print('test'=='testing')\n",
+    "print(not(True and False))\n",
+    "print(not(1 ==1 and 0 !=1))\n",
+    "print('chunky' == 'bacon' and not (3 ==4 or 3==3))\n",
+    "\n",
+    "print(1 == True) #注意1 的用法"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 习题29 if语句"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "too many cats! the world is doomed\n",
+      "the world is dry!\n",
+      "people are greater than or equal to dogs.\n",
+      "People are less than or equal to dogs.\n",
+      "people are dogs\n"
+     ]
+    }
+   ],
+   "source": [
+    "people = 20\n",
+    "cats = 30\n",
+    "dogs = 15\n",
+    "\n",
+    "if people < cats:\n",
+    "    print (\"too many cats! the world is doomed\")\n",
+    "    \n",
+    "if people > cats:\n",
+    "    print(\"not many cats! the world is saved\")\n",
+    "    \n",
+    "if people < dogs:\n",
+    "    print(\"the world is drooled on !\")\n",
+    "    \n",
+    "if people > dogs:\n",
+    "    print(\"the world is dry!\")\n",
+    "    \n",
+    "dogs += 5\n",
+    "\n",
+    "if people >= dogs:\n",
+    "    print(\"people are greater than or equal to dogs.\")\n",
+    "\n",
+    "if people <= dogs:\n",
+    "    print(\"People are less than or equal to dogs.\")\n",
+    "\n",
+    "if people == dogs:\n",
+    "    print(\"people are dogs\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 笨办法 习题31"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "you enter a dard room with two doors.\n",
+      "do you go through door #1 or door #2?\n",
+      "> 1\n",
+      "There is a giant bear here eating a cheese cake.\n",
+      "what do you do?\n",
+      "1. Take the cake.\n",
+      "2. Scream at the bear.\n",
+      "> 2\n",
+      "the bear eats your legs off. Good job!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"\"\"you enter a dard room with two doors.\n",
+    "do you go through door #1 or door #2?\"\"\")\n",
+    "\n",
+    "door = input(\"> \")\n",
+    "\n",
+    "if door == \"1\":\n",
+    "    print(\"There is a giant bear here eating a cheese cake.\")\n",
+    "    print(\"what do you do?\")\n",
+    "    print(\"1. Take the cake.\")\n",
+    "    print(\"2. Scream at the bear.\")\n",
+    "    \n",
+    "    bear = input(\"> \")\n",
+    "    \n",
+    "    if bear == \"1\":\n",
+    "        print(\"the bear eats your face off. Good job!\")\n",
+    "    elif bear == \"2\":\n",
+    "        print(\"the bear eats your legs off. Good job!\")\n",
+    "    else: \n",
+    "        print(f\"Well, doing{bear} is probably better.\")\n",
+    "        print(\"Bear runs away.\")\n",
+    "\n",
+    "elif door ==\"2\":\n",
+    "    print(\"you stare into the endless abyss at Cthulhu's retina.\")\n",
+    "    print(\"1. Blueberries.\")\n",
+    "    print(\"2. Yellow jacket clothespins\")\n",
+    "    print(\"3. Understanding revolvers yelling melodies.\")\n",
+    "    \n",
+    "    insanity = input(\"> \")\n",
+    "        \n",
+    "    if insanity ==\"1\" or insanity ==\"2\":\n",
+    "        print(\"your body survives powered by a mind of jello.\")\n",
+    "        print(\"Good job!\")\n",
+    "    else:\n",
+    "        print(\"the insanity rots your eyes into a pool of muck.\")\n",
+    "        print(\"Good job!\")\n",
+    "\n",
+    "else: \n",
+    "    print(\"You stumble arounda nd fall on a knife and die. Good job!\")\n",
+    "          \n",
+    "    "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
